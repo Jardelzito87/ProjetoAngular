@@ -1,13 +1,25 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { HomeComponent } from './components/home.componet';
+import { HomeComponent } from './component/home/home.component';
+import { RouterLink, RouterOutlet } from '@angular/router';
+import { ArtigosComponent } from './component/artigos/artigos.component';
+import { QuemSomosComponent } from './component/quem-somos/quem-somos.component';
+import { ContatoComponent } from './component/contato/contato.component';
+
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HomeComponent],
+  imports: [
+    RouterOutlet,
+    RouterLink,
+    HomeComponent,
+    ArtigosComponent,
+    QuemSomosComponent,
+    ContatoComponent
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'ProjetoAngular';
+  
 }
